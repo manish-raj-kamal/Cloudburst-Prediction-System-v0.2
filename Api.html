@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CloudBurst Prediction</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Replace 'YOUR_API_KEY' with your actual OpenWeather API key
+            const apiKey = 'a18ee2033be09c668255827261983659';
+            const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+            // Function to fetch weather data and make prediction
+            function predictCloudBurst() {
+                const city = $('#cityInput').val();
+                const url = apiUrl + city + "&appid=" + apiKey;
+                $.get(url, function(data) {
+                    const weather = data.weather[0].main;
+                    if (weather === 'Rain' || weather === 'Thunderstorm') {
+                        $('#result').text('CloudBurst is likely to occur in ' + city);
+                    } else {
+                        $('#result').text('No CloudBurst expected in ' + city);
+                    }
+                });
+            }
+
+            // Example usage
+            $('#searchButton').click(predictCloudBurst);
+        });
+    </script>
+
+    <input type="text" id="cityInput" placeholder="Enter the city name">
+    <button id="searchButton">Search</button>
+    <p id="result"></p>
+</head>
+<body>
+    <h1>CloudBurst Prediction</h1>
+    <p>Check the browser console for the prediction result.</p>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background: url("Background_loop.mp4") no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-sizing: border-box;
+        }
+
+        .disaster {
+            background-image: url(Earthquake.jpg);
+            background-size: cover;
+            padding: 100px 80px;
+            color: #fff;
+            text-align: center;
+            border: 0;
+            border-radius: 20px;
+            margin: 10px;
+        }
+
+        .cloudburst {
+            background-image: url(Flood4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 100px 100px;
+            color: #ffffff;
+            text-align: center;
+            border: 0;
+            border-radius: 20px;
+            margin: 10px;
+        }
+
+        .management {
+            background-image: url(Manage3.jpg);
+            background-size: cover;
+            padding: 100px 100px;
+            color: #fff;
+            text-align: center;
+            border: 0;
+            border-radius: 20px;
+            margin: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .disaster_para {
+            background-color: rgba(4, 247, 255, 0.504);
+            padding: 20px;
+        }
+
+        .management_para {
+            background-color: rgba(185, 86, 255, 0.504);
+            padding: 20px;
+        }
+
+        .navbar {
+            height: 12%;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 60px;
+            cursor: pointer;
+        }
+
+        .menu-icon {
+            width: 30px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 60px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 13px;
+        }
+
+        #video-background {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <video autoplay muted loop id="video-background">
+            <source src="Background_loop.mp4" type="video/mp4">
+        </video>
+        <div class="navbar">
+            <img src="https://static.vecteezy.com/system/resources/previews/024/825/195/non_2x/3d-weather-icon-day-with-rain-free-png.png"
+                class="logo">
+            <h2 style="font-size: 60px; color: #26ad7b; margin:0px auto 0; text-align:center; padding: 7%;">Weather</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/010/794/629/small_2x/list-menu-3d-icon-png.png"
+                class="menu-icon">
+        </div>
+        <div class="disaster">
+            <h2>Disaster</h2>
+            <p class="disaster_para">
+                Disruption on a massive scale, either natural or man-made, occurring in short or long periods is termed
+                a Disaster. Disaster management in India has been an important point of discussion owing to frequent
+                natural disasters ranging from earthquakes, floods, drought, etc.
+                A disaster is defined as a disruption on a massive scale, either natural or man-made, occurring in short
+                or long periods. Disasters can lead to human, material, economic or environmental hardships, which can
+                be beyond the bearable capacity of the affected society. As per statistics, India as a whole is
+                vulnerable to 30 different types of disasters that will affect the economic, social, and human
+                development potential to such an extent that it will have long-term effects on productivity and
+                macro-economic performance.
+            </p>
+        </div>
+        <div class="cloudburst">
+            <h2>Cloudburst</h2>
+            <p class="cloudburst_para">
+                A cloudburst is an extreme amount of precipitation in a short period of time, sometimes accompanied by
+                hail and thunder, which is capable of creating flood conditions. Cloudbursts can quickly dump large
+                amounts of water, e.g. 25 mm of the precipitation corresponds to 25,000 metric tons per square kilometre
+                (1 inch corresponds to 72,300 short tons over one square mile).The term "cloudburst" arose from the
+                notion that clouds were akin to water balloons and could burst, resulting in rapid precipitation. Though
+                this idea has since been disproven, the term remains in use.Rainfall rate equal to or greater than 100
+                millimetres (3.9 in) per hour is a cloudburst.
+            </p>
+        </div>
+        <div class="management">
+            <h2>Disaster management</h2>
+            <p class="management_para">
+                The new approach started from the conviction that development cannot be sustained unless mitigation is
+                built into the development process. Another cornerstone of the approach is that mitigation must be
+                multi-disciplinary, spanning across all sectors of development.The new policy also emanates from the
+                belief that investments in mitigation are much more cost effective than expenditure on relief and
+                rehabilitation. Disaster management occupies an important place in India's policy framework, as poor
+                people are most affected by disaster and they are India's predominant population.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
